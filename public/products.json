@@ -1,0 +1,13 @@
+[
+    { "id": 1, "name": "iPhone 11", "price": 25000, "image": "/images/iphone11.jpg" },
+    { "id": 2, "name": "iPhone 12", "price": 29000, "image": "/images/iphone12.jpg" },
+    { "id": 3, "name": "iPhone 13", "price": 35000, "image": "/images/iphone13.jpg" },
+    { "id": 4, "name": "iPhone 14", "price": 40000, "image": "/images/iphone14.jpg" },
+    { "id": 5, "name": "iPhone 15", "price": 45000, "image": "/images/iphone15.jpg" },
+    { "id": 6, "name": "iPhone 16", "price": 50000, "image": "/images/iphone16.jpg" },
+    { "id": 7, "name": "iPhone 17", "price": 55000, "image": "/images/iphone17.jpg" },
+    { "id": 8, "name": "iPhone 18", "price": 60000, "image": "/images/iphone18.jpg" },
+    { "id": 9, "name": "iPhone 19", "price": 65000, "image": "/images/iphone19.jpg" },
+    { "id": 10, "name": "iPhone 20", "price": 70000, "image": "/images/iphone20.jpg" }
+  ]
+  

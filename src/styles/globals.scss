@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+// Removed invalid JavaScript-style import statement
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #eff5f5;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(177, 18, 18) !important;
+}
+
+.product-card img {
+  width: 100%; // Ensure full responsiveness
+  height: 250px; // Maintain consistency
+  object-fit: contain; // Keep image inside container
+  display: block;
+  margin: 0 auto; // Center images
+  background-color: transparent;
+  mix-blend-mode: multiply;
+}
+
+// 🟢 Grid Layout for Products
+.product-grid {
+  display: grid;
+  gap: 24px;
+  padding: 24px;
+  justify-items: center; // Center items in grid
+  grid-template-columns: 1fr;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+
+// 🟢 Product Styling
+.product {
+  background: rgba(243, 240, 240, 0.9);
+  padding: 12px;
+  text-align: center;
+  color: #33363a;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// 🟢 Responsive Typography
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+p {
+  font-size: 14px;
+  color: #444;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    button {
+      background-color: blue;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    button:disabled {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+    
+  }
+}

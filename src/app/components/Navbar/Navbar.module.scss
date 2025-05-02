@@ -1,0 +1,19 @@
+.navbar {
+    background-color: #155bdd;
+    color: rgb(61, 18, 219);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar a {
+    color: rgb(60, 17, 214);
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  .navbar a:hover {
+    color: #f0a500;
+  }
+  
