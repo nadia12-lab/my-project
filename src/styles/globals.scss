@@ -10,7 +10,7 @@ body {
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: rgb(177, 18, 18) !important;
+  color: rgb(56, 51, 51) !important;
 }
 
 .product-card img {
@@ -26,24 +26,15 @@ body {
 // 🟢 Grid Layout for Products
 .product-grid {
   display: grid;
-  gap: 24px;
-  padding: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Adjusted column size
+  gap: 16px;
+  padding: 16px;
   justify-items: center; // Center items in grid
-  grid-template-columns: 1fr;
 
-  @media (min-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 900px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (min-width: 1200px) {
-    grid-template-columns: repeat(6, 1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); // Mobile-friendly grid
   }
 }
-
 
 // 🟢 Product Styling
 .product {
@@ -82,7 +73,33 @@ p {
     button:disabled {
       background-color: gray;
       cursor: not-allowed;
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #__next {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      body {
+        background-image: url('/images/background.jpg'); /* Your image path */
+        background-size: cover;           /* Cover entire viewport */
+        background-repeat: no-repeat;     /* No repeating */
+        background-position: center;      /* Center the image */
+        background-attachment: fixed;     /* Fixed during scroll */
+        min-height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;               /* Prevent horizontal scroll */
+      }
+      
+      }
+      
     }
     
   }
-}
+
