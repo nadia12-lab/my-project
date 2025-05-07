@@ -1,0 +1,85 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/bg-no-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productCard {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productImage {
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.productTitle {
+  font-size: 18px;
+  margin: 12px 0 6px;
+}
+
+.productPrice {
+  font-weight: bold;
+  color: #a86a1a;
+}
+
+.addButton {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #a86a1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
