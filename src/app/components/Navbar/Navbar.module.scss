@@ -9,11 +9,27 @@
   top: 0;
   z-index: 1000;
 }
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px; // space between image and text
+}
 
+.logoImage {
+  width: 40px;  // adjust size as needed
+  height: 40px;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; 
+}
 .logo {
   font-weight: 700;
   font-size: 1.5rem;
-  color: white;
+  color: rgb(216, 38, 38);
 }
 
 /* Hamburger button - hidden on desktop */

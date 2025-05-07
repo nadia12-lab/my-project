@@ -40,7 +40,7 @@ const navItems = [
     external: true,
     icon: <SiShopee />,
   },
-]; 
+];
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +48,14 @@ export default function NavBar() {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>Build Store Manila</div>
+      <div className={styles.logoContainer}>
+        <img
+          src="/images/buildstore-logo.png"
+          alt="Build Store Manila Logo"
+          className={styles.logoImage}
+        />
+        <div className={styles.logoText}>Build Store Manila</div>
+      </div>
 
       {/* Hamburger button for mobile */}
       <button
