@@ -48,7 +48,7 @@ export default function NavBar() {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>MyApp</div>
+      <div className={styles.logo}>Build Store Manila</div>
 
       {/* Hamburger button for mobile */}
       <button

@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from './PaginationButtons.module.scss';
 import productGridStyles from './ProductGrid.module.scss';
 
+
 interface ProductType {
   id: number;
   name: string;

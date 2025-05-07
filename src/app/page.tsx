@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Logo from "./components/Logo";
 import TikTokCarousel from "./components/TikTokCarousel";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -103,7 +102,7 @@ export default function HomePage() {
         {/* NavBar at the top */}
         <NavBar />
 
-        <Logo />
+      
         <TikTokCarousel />
         <ToastContainer />
 
