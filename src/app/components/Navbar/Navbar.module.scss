@@ -9,14 +9,15 @@
   top: 0;
   z-index: 1000;
 }
+
 .logoContainer {
   display: flex;
   align-items: center;
-  gap: 10px; // space between image and text
+  gap: 10px;
 }
 
 .logoImage {
-  width: 40px;  // adjust size as needed
+  width: 40px;
   height: 40px;
   object-fit: contain;
 }
@@ -24,15 +25,9 @@
 .logoText {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff; 
-}
-.logo {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: rgb(216, 38, 38);
+  color: #fff;
 }
 
-/* Hamburger button - hidden on desktop */
 .menuButton {
   font-size: 1.5rem;
   background: none;
@@ -58,7 +53,6 @@
   }
 }
 
-/* Show nav links when menu open on mobile */
 .open {
   display: flex;
 }
@@ -66,23 +60,42 @@
 .link {
   display: inline-flex;
   align-items: center;
-  color: #ff4500;
+  color: #ff4500; /* default orange */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  cursor: pointer;
+}
 
-  &:hover {
-    color: #4ade80; // green-400
-  }
+.link:hover {
+  color: #4ade80; /* green on hover */
+}
+
+/* Icon styles for react-icons and Lazada image */
+.icon, .lazadaIcon {
+  font-size: 1.5rem;
+  width: 1.5em;
+  height: 1.5em;
+  object-fit: contain;
+  cursor: pointer;
+  transition: color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+  color: #ff4500; /* default orange */
+  filter: invert(42%) sepia(97%) saturate(2556%) hue-rotate(1deg) brightness(102%) contrast(101%);
+}
+
+/* Hover effect on icons */
+.link:hover .icon,
+.link:focus .icon,
+.link:hover .lazadaIcon,
+.link:focus .lazadaIcon {
+  color: #4ade80; /* green on hover */
+  filter: brightness(1.2) drop-shadow(0 2px 6px #4ade80);
+  transform: scale(1.1);
 }
 
 .active {
-  color: white;
+  color: #4ade80;
   font-weight: 700;
   border-bottom: 2px solid #4ade80;
   padding-bottom: 2px;
-}
-
-.icon {
-  font-size: 1.5rem;
 }

@@ -40,6 +40,22 @@ const navItems = [
     external: true,
     icon: <SiShopee />,
   },
+  {
+  id: "lazada",
+  label: "Lazada",
+  href: "https://www.lazada.com.ph/shop/build-store-manila", 
+  external: true,
+  icon: (
+    <img
+      src="/images/lazada.svg"
+      alt="Lazada"
+      className={styles.lazadaIcon}
+      
+      style={{ width: "1.5em", height: "1.5em", objectFit: "contain"
+      }}
+      /> 
+    ),
+  },
 ];
 
 export default function NavBar() {

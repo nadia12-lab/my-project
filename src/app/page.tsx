@@ -1,5 +1,3 @@
-// HomePage.tsx
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -9,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import NavBar from "./components/Navbar/Navbar";
 import styles from "./page.module.scss";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 interface ProductType {
   id: number;
@@ -50,6 +49,32 @@ const localProducts: ProductType[] = [
   },
 ];
 
+// Inline SocialLinks component
+function SocialLinks() {
+  return (
+    <div style={{ display: "flex", gap: "1rem", marginBottom: "1rem" }}>
+      <a
+        href="https://www.facebook.com/yourpage"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        style={{ color: "#3b5998", fontSize: "24px" }}
+      >
+        <FaFacebook />
+      </a>
+      <a
+        href="https://www.instagram.com/yourprofile"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        style={{ color: "#E1306C", fontSize: "24px" }}
+      >
+        <FaInstagram />
+      </a>
+    </div>
+  );
+}
+
 export default function HomePage() {
   const [apiProducts, setApiProducts] = useState<ProductType[]>([]);
 
@@ -88,6 +113,9 @@ export default function HomePage() {
         <NavBar />
         <TikTokCarousel />
         <ToastContainer />
+
+        {/* SocialLinks inserted here */}
+        <SocialLinks />
 
         <h1 className={styles.title}>All Products</h1>
 
