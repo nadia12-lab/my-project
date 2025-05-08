@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FacebookEmbed, InstagramEmbed } from 'react-social-media-embed';
 
 // Import icons from react-icons
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
@@ -49,8 +50,7 @@ const navItems = [
     <img
       src="/images/lazada.svg"
       alt="Lazada"
-      className={styles.lazadaIcon}
-      
+       className={styles.lazadaIcon}
       style={{ width: "1.5em", height: "1.5em", objectFit: "contain"
       }}
       /> 

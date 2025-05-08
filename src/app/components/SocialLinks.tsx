@@ -1,30 +1,32 @@
 "use client";
 
 import React from "react";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-import styles from "./SocialLinks.module.scss"; // Optional CSS module for styling
+import { FacebookEmbed, InstagramEmbed } from "react-social-media-embed";
+import styles from "./SocialMedia.module.scss"; // Optional styling
 
-export default function SocialLinks() {
+export default function SocialMedia() {
   return (
-    <div className={styles.socialLinksContainer}>
-      <a
-        href="https://www.facebook.com/buildstoremanila/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
-        className={styles.socialLink}
-      >
-        <FaFacebook size={24} color="#3b5998" />
-      </a>
-      <a
-        href="https://www.instagram.com/buildstoremanila/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-        className={styles.socialLink}
-      >
-        <FaInstagram size={24} color="#E1306C" />
-      </a>
-    </div>
+    <section className={styles.socialMediaSection}>
+      <h1>Our Social Media</h1>
+
+      <div className={styles.embedContainer}>
+        <div className={styles.embedItem}>
+          <h2>Facebook Post</h2>
+          <FacebookEmbed
+            url="https://www.facebook.com/buildstoremanila/posts/1234567890123456" // Replace with your real post URL
+            width={500}
+          />
+        </div>
+
+        <div className={styles.embedItem}>
+          <h2>Instagram Post</h2>
+          <InstagramEmbed
+            url="https://www.instagram.com/p/POST_ID/" // Replace with your real post URL
+            width={500}
+            captioned
+          />
+        </div>
+      </div>
+    </section>
   );
 }
