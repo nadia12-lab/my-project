@@ -1,4 +1,4 @@
-import "../styles/globals.scss"; // Ensure correct path
+import "../styles/globals.scss";
 
 export const metadata = {
   title: "My-UI-Project",
@@ -8,7 +8,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
+

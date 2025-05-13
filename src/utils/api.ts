@@ -8,3 +8,9 @@ const api = axios.create({
 });
 
 export default api;
+export const maxDuration = 60; // seconds, max 60 on Pro plan
+export const runtime = "nodejs"; // ensure Node.js runtime
+
+export default function handler(req, res) {
+  res.status(200).json({ message: "Hello World" });
+}

@@ -76,7 +76,6 @@ export default function TikTokCarousel() {
                 rel="noopener noreferrer"
                 href={`https://www.tiktok.com/@tiktok/video/${id}`}
               >
-                @tiktok
               </a>
             </blockquote>
           </div>

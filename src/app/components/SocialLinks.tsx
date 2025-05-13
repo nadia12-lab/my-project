@@ -1,32 +1,39 @@
 "use client";
 
-import React from "react";
-import { FacebookEmbed, InstagramEmbed } from "react-social-media-embed";
-import styles from "./SocialMedia.module.scss"; // Optional styling
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { FacebookEmbed } from "react-social-media-embed";
 
-export default function SocialMedia() {
+export default function SocialMediaPage() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    }
+  }, [pathname]); // re-parse Facebook plugins on route change
+
   return (
-    <section className={styles.socialMediaSection}>
-      <h1>Our Social Media</h1>
-
-      <div className={styles.embedContainer}>
-        <div className={styles.embedItem}>
-          <h2>Facebook Post</h2>
-          <FacebookEmbed
-            url="https://www.facebook.com/buildstoremanila/posts/1234567890123456" // Replace with your real post URL
-            width={500}
-          />
-        </div>
-
-        <div className={styles.embedItem}>
-          <h2>Instagram Post</h2>
-          <InstagramEmbed
-            url="https://www.instagram.com/p/POST_ID/" // Replace with your real post URL
-            width={500}
-            captioned
-          />
-        </div>
+    <>
+      <FacebookSDK />
+      <div
+        className="fb-page"
+        data-href="https://www.facebook.com/buildstoremanila"
+        data-tabs="timeline"
+        data-width="500"
+        data-height="70"
+        data-small-header="true"
+        data-adapt-container-width="true"
+        data-hide-cover="false"
+        data-show-facepile="true"
+      >
+        <blockquote
+          cite="https://www.facebook.com/buildstoremanila"
+          className="fb-xfbml-parse-ignore"
+        >
+          <a href="https://www.facebook.com/buildstoremanila">Build Store Manila</a>
+        </blockquote>
       </div>
-    </section>
+    </>
   );
 }

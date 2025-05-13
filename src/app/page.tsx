@@ -9,8 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import NavBar from "./components/Navbar/Navbar";
 import styles from "./page.module.scss";
-import SocialLinks from "./components/SocialLinks";
-
+import FacebookSDK from "./components/FacebookSDK";
 
 interface ProductType {
   id: number;
@@ -20,36 +19,11 @@ interface ProductType {
 }
 
 const localProducts: ProductType[] = [
-  {
-    id: 101,
-    title: "iPhone 11",
-    price: 25000.0,
-    image: "/images/iphone11.jpg",
-  },
-  {
-    id: 102,
-    title: "iPhone 12",
-    price: 29000.0,
-    image: "/images/iphone12.jpg",
-  },
-  {
-    id: 103,
-    title: "iPhone 13",
-    price: 35000.0,
-    image: "/images/iphone13.jpg",
-  },
-  {
-    id: 104,
-    title: "iPhone 14",
-    price: 40000.0,
-    image: "/images/iphone14.jpg",
-  },
-  {
-    id: 105,
-    title: "iPhone 15",
-    price: 45000.0,
-    image: "/images/iphone15.jpg",
-  },
+  { id: 101, title: "iPhone 11", price: 25000.0, image: "/images/iphone11.jpg" },
+  { id: 102, title: "iPhone 12", price: 29000.0, image: "/images/iphone12.jpg" },
+  { id: 103, title: "iPhone 13", price: 35000.0, image: "/images/iphone13.jpg" },
+  { id: 104, title: "iPhone 14", price: 40000.0, image: "/images/iphone14.jpg" },
+  { id: 105, title: "iPhone 15", price: 45000.0, image: "/images/iphone15.jpg" },
 ];
 
 export default function HomePage() {
@@ -115,6 +89,12 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+
+        {/* Facebook embed section */}
+        <section style={{ marginTop: "3rem" }}>
+          <h2>Follow us on Facebook!</h2>
+          <FacebookSDK />
+        </section>
       </main>
     </div>
   );
