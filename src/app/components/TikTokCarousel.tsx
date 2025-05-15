@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -67,14 +67,14 @@ export default function TikTokCarousel() {
           <div key={id}>
             <blockquote
               className="tiktok-embed"
-              cite={`https://www.tiktok.com/@tiktok/video/${id}`}
+              cite={`https://www.tiktok.com/@buildstoremanila/video/${id}`}
               data-video-id={id}
               style={{ width: "325px", height: "563px" }}
             >
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`https://www.tiktok.com/@tiktok/video/${id}`}
+                href={`https://www.tiktok.com/@buildstoremanila/video/${id}`}
               >
               </a>
             </blockquote>

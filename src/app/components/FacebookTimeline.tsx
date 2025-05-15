@@ -1,27 +1,38 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { FacebookEmbed } from "react-social-media-embed";
+declare global {
+  interface Window {
+    FB: any;
+  }
+}
 
-export default function SocialMediaPage() {
-  const pathname = usePathname();
-
+export default function FacebookTimeline() {
   useEffect(() => {
-    if (window.FB) {
+    // Load Facebook SDK script if not already loaded
+    if (!window.FB) {
+      ((d, s, id) => {
+        const fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+const js = document.createElement(s) as HTMLScriptElement;
+        js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0";
+        fjs.parentNode?.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    } else {
       window.FB.XFBML.parse();
     }
-  }, [pathname]); // re-parse Facebook plugins on route change
+  }, []);
 
   return (
     <>
-      <FacebookSDK />
+      <div id="fb-root"></div>
       <div
         className="fb-page"
         data-href="https://www.facebook.com/buildstoremanila"
         data-tabs="timeline"
         data-width="500"
-        data-height="70"
+        data-height="500"
         data-small-header="true"
         data-adapt-container-width="true"
         data-hide-cover="false"
@@ -37,3 +48,4 @@ export default function SocialMediaPage() {
     </>
   );
 }
+

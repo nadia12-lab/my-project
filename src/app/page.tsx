@@ -1,15 +1,18 @@
-// HomePage.tsx
-
 "use client";
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import TikTokCarousel from "./components/TikTokCarousel";
+import dynamic from "next/dynamic";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import NavBar from "./components/Navbar/Navbar";
 import styles from "./page.module.scss";
-import FacebookSDK from "./components/FacebookSDK";
+
+// Dynamically import client-only components with SSR disabled
+const TikTokCarousel = dynamic(() => import("./components/TikTokCarousel"), { ssr: false });
+const FacebookTimeline = dynamic(() => import("./components/FacebookTimeline"), { ssr: false });
+const InstagramProfileFeed = dynamic(() => import("./components/InstagramProfileFeed"), { ssr: false });
+const YouTubeChannelVideos = dynamic(() => import("./components/YouTubeChannelVideos"), { ssr: false });
 
 interface ProductType {
   id: number;
@@ -90,10 +93,20 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Facebook embed section */}
+        {/* Social Media Timelines */}
         <section style={{ marginTop: "3rem" }}>
           <h2>Follow us on Facebook!</h2>
-          <FacebookSDK />
+          <FacebookTimeline />
+        </section>
+
+        <section style={{ marginTop: "3rem" }}>
+          <h2>Instagram Feed</h2>
+          <InstagramProfileFeed />
+        </section>
+
+        <section style={{ marginTop: "3rem" }}>
+          <h2>YouTube Channel Videos</h2>
+          <YouTubeChannelVideos />
         </section>
       </main>
     </div>
